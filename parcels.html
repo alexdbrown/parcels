@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <title>Parcels!</title>
+</head>
+<body>
+  <h1>Enter your parcel dimensions, please. And also the weight.</h1>
+  <div class="container">
+    <form action="parcels.php">
+      <div class="form-group">
+        <label for="length">Enter the length of your parcel in inches</label>
+        <input id="length" name="length" class="form-control" type="number">
+      </div>
+      <div class="form-group">
+        <label for="width">Enter the width of your parcel in inches</label>
+        <input id="length" name="length" class="form-control" type="number">
+      </div>
+      <div class="form-group">
+        <label for="height">Enter the height of your parcel in inches</label>
+        <input id="height" name="height" class="form-control" type="number">
+      </div>
+      <div class="form-group">
+        <label for="weight">Enter the weight of your parcel in lbs.</label>
+        <input id="weight" name="weight" class="form-control" type="number">
+      </div>
+      <button type="submit" class"btn-danger">Calculate your cost!</button>
+    </form>
+  </div>
+</body>
+</html>

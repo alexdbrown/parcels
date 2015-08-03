@@ -1,10 +1,10 @@
 <?php
     class Parcel
     {
-      private $length
-      private $width
-      private $height
-      private $weight
+      private $length;
+      private $width;
+      private $height;
+      private $weight;
 
       function __construct($length, $width, $height, $weight)
       {
@@ -29,7 +29,7 @@
           $this->width = $new_width;
       }
 
-      function getWidth($new_width)
+      function getWidth()
       {
           return $this->width;
       }
@@ -54,3 +54,25 @@
           return $this->weight;
       }
     }
+
+$user_parcel = new Parcel($_GET["length"], $_GET["width"], $_GET["height"], $_GET["weight"]);
+
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <title>Parcel Results!</title>
+</head>
+<body>
+  <h1>Here are the results of your parcel inqury</h1>
+  <?php
+      echo $user_parcel->getLength();
+      echo $user_parcel->getWidth();
+      echo $user_parcel->getHeight();
+      echo $user_parcel->getWeight();
+  ?>
+</body>
+</html>
